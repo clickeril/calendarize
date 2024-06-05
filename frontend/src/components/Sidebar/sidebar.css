@@ -1,0 +1,128 @@
+:root {
+    --PrimaryColor: rgb(74, 144, 226);
+    --secondaryColor: rgb(128, 70, 228);
+    --gradientColor: linear-gradient(to right, #3498db, #8e44ad);
+    --gradientColorGreen: linear-gradient(to right, #00ff87, #60efff);
+    --whiteColor: rgb(255, 255, 255);
+    --blackColor: rgb(0, 0, 0);
+    --textColor: rgb(51, 51, 51);
+    --whiteColorDeam: rgb(248, 248, 248);
+    --greyTextColor: rgb(136, 136, 136);
+    --inputColor: rgb(236, 240, 241);
+    --bodyColor: rgb(245, 245, 245);
+    --cardBG: rgb(236, 240, 241);
+}
+
+/* sidebar.css */
+.sidebar {
+    width: 80px; /* Lebar yang lebih kecil */
+    height: calc(100vh - 40px); /* Tinggi total viewport dikurangi margin atas dan bawah */
+    background-color: var(--whiteColor);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 20px; /* Margin atas */
+    bottom: 20px; /* Margin bawah */
+    left: 20px;
+    overflow-y: auto;
+    z-index: 100; /* Menempatkan sidebar di atas konten lain */
+    border-radius: 20px; /* Menambahkan border radius */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Membuat konten berada di tengah */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
+    transition: width 0.3s ease; /* Efek transisi saat ukuran sidebar berubah */
+}
+
+/* Ubah ukuran sidebar saat mouse diarahkan ke atasnya */
+/* .sidebar:hover {
+    width: 250px;
+} */
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Hide anchor tag underline */
+.sidebar a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Hide scrollbar but allow scrolling */
+.sidebar {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* Style untuk ikon */
+.icon {
+    font-size: 50px; /* Ukuran ikon */
+    margin-bottom: 20px; /* Ubah jarak antara ikon dan daftar menu */
+    color: var(--PrimaryColor);
+}
+
+.list-icon {
+    font-size: 25px; /* Ukuran ikon */
+    margin-bottom: 15px; /* Ubah jarak antara ikon dan daftar menu */
+    color: var(--blackColor);
+    transition: transform 0.3s ease;
+}
+
+.list-icon:hover {
+    transform: scale(1.2); /* Memperbesar ikon saat dihover */
+}
+
+.logout-icon {
+    font-size: 25px; /* Ukuran ikon */
+    color: var(--blackColor);
+    transition: transform 0.3s ease;
+    position: absolute; /* Mengubah posisi ikon menjadi absolute */
+    bottom: 20px; /* Menempatkan ikon 20px dari bagian bawah container */
+}
+
+.logout-icon:hover {
+    transform: scale(1.2); /* Memperbesar ikon saat dihover */
+}
+
+/* sidebar.css */
+
+/* Tata letak responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .sidebar {
+      width: 60px; /* Mengurangi lebar sidebar untuk layar kecil */
+      padding: 10px; /* Mengurangi padding pada layar kecil */
+      top: 10px; /* Ubah margin atas untuk layar kecil */
+      bottom: 10px; /* Ubah margin bawah untuk layar kecil */
+      left: 10px; /* Ubah margin kiri untuk layar kecil */
+      height: calc(100vh + 20px);
+      display: flex; /* Menggunakan display flex untuk sidebar */
+      align-items: center; /* Memastikan ikon tetap berada di tengah */
+      flex-direction: column; /* Mengatur agar ikon dan menu berada dalam satu kolom */
+    }
+  
+    .icon {
+      font-size: 40px; /* Mengurangi ukuran ikon untuk layar kecil */
+      margin-bottom: 10px; /* Mengurangi jarak antara ikon dan daftar menu untuk layar kecil */
+    }
+  
+    .list-icon {
+      font-size: 20px; /* Mengurangi ukuran ikon untuk layar kecil */
+      margin-bottom: 5px; /* Mengurangi jarak antara ikon dan daftar menu untuk layar kecil */
+    }
+  
+    .logout-icon {
+      bottom: 20px; /* Ubah posisi ikon logout untuk layar kecil */
+    }
+  }
+  
+  
+

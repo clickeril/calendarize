@@ -1,0 +1,35 @@
+:root {
+  --PrimaryColor: rgb(74, 144, 226);
+  --secondaryColor: rgb(128, 70, 228);
+  --whiteColor: rgb(255, 255, 255);
+  --blackColor: rgb(0, 0, 0);
+  --textColor: rgb(51, 51, 51);
+  --bodyColor: rgb(245, 245, 245);
+}
+
+.custom-calendar .fc-daygrid-event {
+  background-color: var(--PrimaryColor);
+  width: 80%;
+  color: var(--whiteColor);
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* cursor: pointer; */
+  margin-bottom: 5px; /* Mengatur jarak antar acara */
+  border-radius: 8px; /* Memberikan sudut bulat pada kotak acara */
+  padding: 10px; /* Menambahkan ruang di dalam kotak acara */
+}
+
+.custom-calendar h3 {
+  font-size: 22px;
+  margin-bottom: -5px;
+  color: var(--secondaryColor);
+}
+
+.custom-calendar p {
+  font-size: 16px;
+  color: orange;
+}
+
+
+

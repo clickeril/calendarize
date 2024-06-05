@@ -1,0 +1,460 @@
+/* Definisi variabel warna */
+:root {
+  --primaryColor: rgb(74, 144, 226);
+  --secondaryColor: rgb(128, 70, 228);
+  --gradientColor: linear-gradient(to right, #3498db, #8e44ad);
+  --gradientColorGreen: linear-gradient(to right, #00ff87, #60efff);
+  --whiteColor: rgb(255, 255, 255);
+  --blackColor: rgb(0, 0, 0);
+  --textColor: rgb(51, 51, 51);
+  --whiteColorDeam: rgb(248, 248, 248);
+  --greyTextColor: rgb(136, 136, 136);
+  --inputColor: rgb(236, 240, 241);
+  --bodyColor: rgb(245, 245, 245);
+  --cardBG: rgb(236, 240, 241);
+}
+
+/* Container untuk halaman leave */
+.leave-container {
+  margin-left: 120px;
+  padding: 20px;
+}
+
+/* Judul halaman */
+#judul {
+  color: var(--primaryColor);
+  font-size: 24px;
+  margin-bottom: -10px;
+}
+
+/* Deskripsi halaman */
+#desc {
+  color: var(--blackColor);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Container untuk kartu-kartu leave */
+/* Container untuk kartu-kartu leave */
+.leave-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Kartu leave */
+.leave-card {
+  border: 1px solid var(--greyTextColor);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.leave-card.input h2 {
+  margin:  0  0  10px  0; /* Header margin */
+  font-weight: bold; /* Make the header stand out */
+  font-size:  20px; /* Larger font size for the header */
+  color: var(--secondaryColor);
+}
+
+/* Kartu input */
+.leave-card.input {
+  padding:  20px;
+  border: none;
+  border-radius:  10px; /* Increased border radius */
+  box-shadow:  0  4px  8px rgba(0,  0,  0,  0.2); /* Darker shadow for depth */
+  background-color: var(--whiteColor); /* Use variable for card background color */
+  transition: none; /* Removed hover transition */
+  font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
+  font-size:  16px; /* Set a consistent font size */
+  line-height:  1.5; /* Improve readability with a comfortable line height */
+  color: #333; /* Use a dark color for text */
+  transition: transform 0.3s ease;
+  width: 72%;
+}
+
+.leave-card.input h3 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.leave-card.input input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ffffff; /* Warna latar belakang */
+  border: 1px solid #ccc; /* Warna border */
+}
+
+/* Style input saat Hover */
+.leave-card.input input[type="text"]:hover {
+  border-color: #999; /* Warna border saat hover */
+}
+
+/* Style input saat di-Focus */
+.leave-card.input input[type="text"]:focus {
+  border-color: #555; /* Warna border saat focus */
+}
+
+/* Input pada kartu input */
+.leave-card.input select,
+.leave-card.input input[type="date"],
+.leave-card.input textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ffffff; /* Warna latar belakang */
+  border: 1px solid #ccc; /* Warna border */
+}
+
+/* Kontainer untuk input tanggal */
+.leave-card.input .date-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leave-card.input .date-inputs > div {
+  width: 48%; /* Setiap bagian untuk tanggal akan mengambil 48% dari lebar parent */
+}
+
+/* Input komentar pada kartu input */
+.leave-card.input .comment-input textarea {
+  height: 100px; /* Sesuaikan tinggi textarea */
+}
+
+.leave-card.input select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ffffff; /* Warna latar belakang */
+  border: 1px solid #ccc; /* Warna border */
+  outline: none; /* Hilangkan border saat di-focus */
+}
+
+/* Gayakan Opsi */
+.leave-card.input select option {
+  padding: 10px;
+  background-color: #fff; /* Warna latar belakang */
+  color: #333; /* Warna teks */
+}
+
+/* Style Select saat Hover */
+.leave-card.input select:hover {
+  border-color: #999; /* Warna border saat hover */
+}
+
+/* Style Select saat di-Focus */
+.leave-card.input select:focus {
+  border-color: #555; /* Warna border saat focus */
+}
+
+/* Style Opsi saat Hover */
+.leave-card.input select option:hover {
+  background-color: #f0f0f0; /* Warna latar belakang saat hover */
+}
+
+/* Style Opsi saat Dipilih */
+.leave-card.input select option:checked {
+  background-color: #ddd; /* Warna latar belakang saat dipilih */
+}
+
+.leave-card.input select option {
+  padding: 12px 15px; /* Sesuaikan padding atas dan bawah untuk menambahkan ruang */
+  margin-bottom: 5px; /* Tambahkan margin bawah di antara opsi-opsi */
+  background-color: #fff; /* Warna latar belakang */
+  color: #333; /* Warna teks */
+}
+
+/* Kartu submit */
+.leave-card.submit {
+  width: 20%;
+  border: none;
+}
+
+.leave-card.submit h4 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.leave-card.submit p {
+  margin-bottom: 50px;
+  margin-top: -10px;
+  font-size: 20px;
+}
+
+/* Tombol pada kartu submit */
+.leave-card.submit .button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.leave-card.submit button {
+  padding: 15px 30px;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih lembut */
+}
+
+.leave-card.submit button:hover {
+  background-color:  rgba(0, 128, 0, 0.8); /* Warna yang sedikit lebih gelap */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Meningkatkan bayangan saat hover */
+  transform: translateY(-2px); /* Menggeser tombol sedikit ke atas saat hover */
+}
+
+.leave-card.submit button:active {
+  transform: translateY(0); /* Mengembalikan posisi tombol saat tombol ditekan */
+  box-shadow: none; /* Menghilangkan bayangan saat tombol ditekan */
+}
+
+
+.leave-card.submit button.clear {
+  padding: 15px 30px; /* Atur padding tombol Clear */
+  color: var(--blackColor); /* Warna teks */
+  border: 1px solid orangered; /* Garis tepi */
+  background: none;
+}
+
+.leave-card.submit button.clear:hover {
+  background: rgba(255, 0, 0, 0.18);
+}
+
+
+
+
+.mylist-leave-container {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius:  10px; /* Increased border radius */
+  box-shadow:  0  4px  8px rgba(0,  0,  0,  0.2); /* Darker shadow for depth */
+  background-color: var(--whiteColor); /* Use variable for card background color */
+  transition: none; /* Removed hover transition */
+  font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
+  font-size:  16px; /* Set a consistent font size */
+  line-height:  1.5; /* Improve readability with a comfortable line height */
+  color: #333; /* Use a dark color for text */
+  transition: transform 0.3s ease;
+}
+
+.mylist-leave-container h2 {
+  margin:  0  0  10px  0; /* Header margin */
+  font-weight: bold; /* Make the header stand out */
+  font-size:  20px; /* Larger font size for the header */
+  color: var(--secondaryColor);
+}
+
+.mylist-leave-container h4 {
+  margin-top:  0;
+  font-size: 14px;
+}
+
+.mylist-leave-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leavelist-card {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: normal; /* Mengurangi font-weight untuk membuat font lebih lembut */
+  font-size: 14px; /* Ukuran font yang lebih kecil */
+  color: #333; /* Warna font yang lebih netral */
+  overflow-x: auto;
+}
+
+.leavelist-card table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.leavelist-card table thead th {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold; /* Font tebal pada header */
+}
+
+.leavelist-card table th:nth-child(2) {
+  width: 25%; /* Sesuaikan dengan lebar yang diinginkan */
+  text-align: left; /* Atur teks ke kiri */
+}
+
+.leavelist-card table th:nth-child(2) input[type="checkbox"] {
+  margin-right: 5px; /* Sesuaikan dengan margin yang diinginkan */
+}
+
+.leavelist-card table th:nth-child(2) input[type="checkbox"] + label {
+  font-weight: bold; /* Membuat label teks lebih tebal */
+}
+
+.leavelist-card table thead th:first-child {
+  border-top-left-radius: 20px; /* Top left radius */
+}
+
+.leavelist-card table thead th:last-child {
+  border-top-right-radius: 20px; /* Top right radius */
+}
+
+.leavelist-card table td {
+  padding: 10px;
+  text-align: left;
+  background-color: white; /* Seluruh sel <td> memiliki latar belakang putih */
+}
+
+.leavelist-card table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.leavelist-card table button {
+  color: white;
+  background-color: orange;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.leavelist-card table button:hover{
+  background-color:  red; /* Warna yang sedikit lebih gelap */
+  transform: translateY(-2px);
+}
+
+.leavelist-card table button:active{
+  transform: translateY(0); /* Mengembalikan posisi tombol saat tombol ditekan */
+  box-shadow: none;
+}
+
+.leavelist-card table input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Aturan media query untuk responsif */
+@media screen and (max-width: 740px) {
+  .leave-container {
+    margin-left: 90px; /* Mengubah margin kiri pada layar kecil */
+    margin-right: 30px; /* Mengubah margin kanan pada layar kecil */
+  }
+
+  /* Atur padding menjadi 10px pada layar kecil */
+  .leave-content {
+    padding: 10px;
+  }
+
+  /* Ubah tata letak kartu-kartu menjadi vertikal pada layar kecil */
+  .leave-card-container {
+    flex-direction: column;
+  }
+
+  /* Set lebar kartu menjadi penuh pada layar kecil */
+  .leave-card {
+    width: 100%;
+    margin-bottom: 20px; /* Hapus margin bawah pada kartu-kartu pada layar kecil */
+  }
+
+  /* Atur lebar kartu input menjadi penuh pada layar kecil */
+  .leave-card.input {
+    width: 100%;
+  }
+
+  /* Atur lebar kartu submit menjadi penuh pada layar kecil */
+  .leave-card.submit {
+    width: 100%;
+    margin-top: 20px; /* Tambahkan jarak antara kartu input dan kartu submit */
+    border-radius:  10px; /* Increased border radius */
+    box-shadow:  0  4px  8px rgba(0,  0,  0,  0.2); /* Darker shadow for depth */
+    background-color: var(--whiteColor); /* Use variable for card background color */
+    transition: none; /* Removed hover transition */
+    font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
+    font-size:  16px; /* Set a consistent font size */
+    line-height:  1.5; /* Improve readability with a comfortable line height */
+    color: #333; /* Use a dark color for text */
+    transition: transform 0.3s ease;
+    padding: 20px; /* Tambahkan padding pada kartu submit */
+  }
+
+  /* Tambahkan aturan untuk membuat konten kartu submit menjadi flex column */
+  .leave-card.submit .button-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Tambahkan ruang di antara tombol pada kartu submit */
+  .leave-card.submit .button-container button {
+    margin-bottom: 10px;
+  }
+
+
+  .mylist-leave-container{
+    width: 100%;
+  }
+
+  .leavelist-card table thead {
+    display: none; /* Sembunyikan header pada layar kecil */
+  }
+  .leavelist-card table, .leavelist-card table tbody, .leavelist-card table tr, .leavelist-card table td {
+    display: block; /* Ubah tata letak tabel menjadi block */
+  }
+  .leavelist-card table tr {
+    margin-bottom: 15px; /* Beri ruang antara baris */
+    border: 1px solid #ccc; /* Tambahkan garis pembatas antara baris */
+  }
+  .leavelist-card table td {
+    text-align: left; /* Atur teks menjadi rata kanan */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Tambahkan garis bawah pada setiap sel */
+  }
+  .leavelist-card table td:before {
+    content: attr(data-label); /* Tambahkan label dari data-label attribute */
+    float: left;
+    font-weight: bold;
+  }
+}
+
+@media (max-width:  576px) {
+  
+  .leave-container {
+    margin-left:  80px;
+    margin-right:  30px;
+  }
+
+  h2 {
+    font-size:  1.5rem;
+  }
+
+  p {
+    font-size:  0.9rem;
+  }
+}
+

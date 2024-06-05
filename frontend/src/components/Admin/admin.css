@@ -1,0 +1,265 @@
+body {
+    background-color: var(--whiteColorDeam);
+  }
+  
+  :root {
+    --PrimaryColor: rgb(74,  144,  226);
+    --secondaryColor: rgb(128,  70,  228);
+    --gradientColor: linear-gradient(to right, #3498db, #8e44ad);
+    --gradientColorGreen: linear-gradient(to right, #00ff87, #60efff);
+    --whiteColor: rgb(255,  255,  255);
+    --blackColor: rgb(0,  0,  0);
+    --textColor: rgb(51,  51,  51);
+    --whiteColorDeam: rgb(248,  248,  248);
+    --greyTextColor: rgb(136,  136,  136);
+    --inputColor: rgb(236,  240,  241);
+    --bodyColor: rgb(245,  245,  245);
+    --cardBG: rgb(236,  240,  241);
+  }
+  
+  .admin-container {
+    margin-left:  120px;
+  }
+  
+  .admin-content {
+    padding:  20px;
+  }
+  
+
+.adminlist-leave-container {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px; /* Increased border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
+  background-color: var(--whiteColor); /* Use variable for card background color */
+  transition: none; /* Removed hover transition */
+  font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
+  font-size: 16px; /* Set a consistent font size */
+  line-height: 1.5; /* Improve readability with a comfortable line height */
+  color: #333; /* Use a dark color for text */
+  transition: transform 0.3s ease;
+}
+
+.adminlist-leave-container h2 {
+  margin: 0 0 10px 0; /* Header margin */
+  font-weight: bold; /* Make the header stand out */
+  font-size: 20px; /* Larger font size for the header */
+  color: var(--secondaryColor);
+}
+
+.adminlist-leave-container h4 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.adminlist-leave-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.adminlist-card {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: normal; /* Mengurangi font-weight untuk membuat font lebih lembut */
+  font-size: 14px; /* Ukuran font yang lebih kecil */
+  color: #333; /* Warna font yang lebih netral */
+  overflow-x: auto;
+}
+
+.adminlist-card table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.adminlist-card table thead th {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold; /* Font tebal pada header */
+}
+
+.adminlist-card table th:nth-child(2) {
+  width: 25%; /* Sesuaikan dengan lebar yang diinginkan */
+  text-align: left; /* Atur teks ke kiri */
+}
+
+.adminlist-card table th:nth-child(2) input[type="checkbox"] {
+  margin-right: 5px; /* Sesuaikan dengan margin yang diinginkan */
+}
+
+.adminlist-card table th:nth-child(2) input[type="checkbox"] + label {
+  font-weight: bold; /* Membuat label teks lebih tebal */
+}
+
+.adminlist-card table thead th:first-child {
+  border-top-left-radius: 20px; /* Top left radius */
+}
+
+.adminlist-card table thead th:last-child {
+  border-top-right-radius: 20px; /* Top right radius */
+}
+
+.adminlist-card table td {
+  padding: 10px;
+  text-align: left;
+  background-color: white; /* Seluruh sel <td> memiliki latar belakang putih */
+}
+
+.adminlist-card table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+.adminlist-card table .approve {
+  color: white;
+  background-color: var(--PrimaryColor);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin: 2px;
+}
+
+.adminlist-card table .approve:hover {
+  background-color: green; /* Warna yang sedikit lebih gelap */
+  transform: translateY(-2px);
+}
+
+.adminlist-card table .approve:active {
+  transform: translateY(0); /* Mengembalikan posisi tombol saat tombol ditekan */
+  box-shadow: none;
+}
+
+
+.adminlist-card table .reject {
+  color: white;
+  background-color: orange;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin: 2px;
+}
+
+.adminlist-card table .reject:hover {
+  background-color: red; /* Warna yang sedikit lebih gelap */
+  transform: translateY(-2px);
+}
+
+.adminlist-card table .reject:active {
+  transform: translateY(0); /* Mengembalikan posisi tombol saat tombol ditekan */
+  box-shadow: none;
+}
+
+.adminlist-card table input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+
+
+/* Aturan media query untuk responsif */
+@media screen and (max-width: 740px) {
+  .admin-container {
+    margin-left: 90px; /* Mengubah margin kiri pada layar kecil */
+    margin-right: 30px; /* Mengubah margin kanan pada layar kecil */
+  }
+
+  /* Atur padding menjadi 10px pada layar kecil */
+  .admin-content {
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  /* Ubah tata letak kartu-kartu menjadi vertikal pada layar kecil */
+  .adminlist-leave-container {
+    flex-direction: column;
+  }
+
+  /* Set lebar kartu menjadi penuh pada layar kecil */
+  .adminlist-card {
+    width: 100%;
+    margin-bottom: 20px; /* Hapus margin bawah pada kartu-kartu pada layar kecil */
+  }
+
+  /* Atur lebar kartu input menjadi penuh pada layar kecil */
+  .adminlist-card.input {
+    width: 100%;
+  }
+
+  /* Atur lebar kartu submit menjadi penuh pada layar kecil */
+  .adminlist-card.submit {
+    width: 100%;
+    margin-top: 20px; /* Tambahkan jarak antara kartu input dan kartu submit */
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
+    background-color: var(--whiteColor); /* Use variable for card background color */
+    transition: none; /* Removed hover transition */
+    font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
+    font-size: 16px; /* Set a consistent font size */
+    line-height: 1.5; /* Improve readability with a comfortable line height */
+    color: #333; /* Use a dark color for text */
+    transition: transform 0.3s ease;
+    padding: 20px; /* Tambahkan padding pada kartu submit */
+  }
+
+  /* Tambahkan aturan untuk membuat konten kartu submit menjadi flex column */
+  .adminlist-card.submit .button-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Tambahkan ruang di antara tombol pada kartu submit */
+  .adminlist-card.submit .button-container button {
+    margin-bottom: 10px;
+  }
+
+  .adminlist-leave-container {
+    width: 100%;
+  }
+
+  .adminlist-card table thead {
+    display: none; /* Sembunyikan header pada layar kecil */
+  }
+  .adminlist-card table,
+  .adminlist-card table tbody,
+  .adminlist-card table tr,
+  .adminlist-card table td {
+    display: block; /* Ubah tata letak tabel menjadi block */
+  }
+  .adminlist-card table tr {
+    margin-bottom: 15px; /* Beri ruang antara baris */
+    border: 1px solid #ccc; /* Tambahkan garis pembatas antara baris */
+  }
+  .adminlist-card table td {
+    text-align: left; /* Atur teks menjadi rata kanan */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Tambahkan garis bawah pada setiap sel */
+  }
+  .adminlist-card table td:before {
+    content: attr(data-label); /* Tambahkan label dari data-label attribute */
+    float: left;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-container {
+    margin-left: 80px;
+    margin-right: 30px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+
+  

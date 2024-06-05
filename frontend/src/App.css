@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@517&display=swap');
+
+* {
+  padding:  0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* colors and styling  */
+:root {
+  --PrimaryColor: rgb(74, 144, 226); /* Warna biru untuk elemen primer */
+  --secondaryColor: rgb(128, 70, 228); /* Warna oranye untuk elemen sekunder */
+  --gradientColor: linear-gradient(to right, #3498db, #8e44ad); /* Warna gradient untuk latar belakang */
+  --gradientColorGreen: linear-gradient(to right, #00ff87, #60efff); /* Warna gradient untuk latar belakang */
+  --whiteColor: rgb(255, 255, 255); /* Warna putih untuk teks dan latar belakang */
+  --blackColor: rgb(0, 0, 0); /* Warna hitam untuk teks dan elemen lainnya */
+  --textColor: rgb(51, 51, 51); /* Warna teks default */
+  --whiteColorDeam: rgb(248, 248, 248); /* Nuansa lebih terang dari putih untuk latar belakang */
+  --greyTextColor: rgb(136, 136, 136); /* Warna abu-abu untuk teks tambahan */
+  --inputColor: rgb(236, 240, 241); /* Warna latar belakang untuk bidang input */
+  --bodyColor: rgb(245, 245, 245); /* Warna latar belakang untuk badan */
+  --cardBG: rgb(236, 240, 241); /* Warna latar belakang untuk kartu atau kontainer */
+}
+
+body {
+  background-color: var(--bodyColor);
+}
+
+h1 {
+  color: var(--PrimaryColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.icon{
+  font-size: 6rem;
+  cursor: pointer;
+}
+
+.button {
+  background-color: var(--secondaryColor);
+  color: var(--whiteColor);
+}
+
+.button:hover {
+  background-color: var(--gradientColor);
+}
+
+
+@media screen and (min-width: 1240px) {
+  .container{
+    width: 80% !important;
+    margin: auto !important;
+  }
+
+  .section{
+    padding: 6rem 0 4rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body{
+    zoom: 1.7;
+  }
+}
